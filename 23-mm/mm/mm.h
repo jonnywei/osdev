@@ -7,7 +7,7 @@
 
 #define FREE_MEM_START_ADDR 0x100000   // 1M
 
-#define FREE_MEM_END_ADDR   0x10000000 // 256M
+#define FREE_MEM_SIZE   0x10000000 // 256M
 
 
 

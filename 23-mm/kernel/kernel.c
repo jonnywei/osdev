@@ -10,7 +10,7 @@ void kernel_main() {
     irq_install();
 
       mm_init( &memman); 
-      mm_free(&memman,FREE_MEM_START_ADDR,FREE_MEM_END_ADDR-FREE_MEM_START_ADDR);
+      mm_free(&memman,FREE_MEM_START_ADDR,FREE_MEM_SIZE);
 
         total = mm_total(&memman);
         char total_memory_str[16] = "";
@@ -19,7 +19,7 @@ void kernel_main() {
         kprint(total_memory_str);
         kprint("\n");
 
-        
+
      kprint("Type something, it will go through the kernel\n"
         "Type END to halt the CPU\n> ");
 

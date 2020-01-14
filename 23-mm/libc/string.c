@@ -37,7 +37,7 @@ void int_to_ascii(int n, char str[]) {
 
     /* TODO: implement "reverse" */
 
-        reverse(str);
+     reverse(str);
 }
 
 // void reverse(char s[]){

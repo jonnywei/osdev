@@ -22,7 +22,7 @@ void user_input(char *input) {
         kprint(phys_str);
         kprint("\n");
     }else if (strcmp(input, "MEM") == 0) {
-        u32 phys_addr = mm_alloc(&memman, 4);
+        u32 phys_addr = mm_alloc(&memman, 0x100000);
         if(phys_addr == 0){
               kprint("alloc memory error ");
               kprint("\n");
@@ -32,6 +32,9 @@ void user_input(char *input) {
             kprint("physical address: ");
             kprint(phys_str);
             kprint("\n");
+
+            memory_set(phys_addr,'x',1000);
+            
         }
      
     }

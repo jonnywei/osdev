@@ -29,7 +29,7 @@ u32 mm_alloc(mm_t* mm , u32 size){
         }else {
              addr = free->addr;
              free->addr += size;
-             free->addr -= size;
+             free->size -= size;
              if(free->size == 0){
                   mm->frees--;
                   for(j =i; j < mm->frees; j++){
