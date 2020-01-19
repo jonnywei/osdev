@@ -4,6 +4,7 @@
 #include "../mm/mm.h"
 #include "../fs/initrd.h"
 #include "../fs/fs.h"
+#include "task.h"
 
 void user_input(char *input) {
 
@@ -66,6 +67,11 @@ void user_input(char *input) {
         i++;
     }
      
+    }else if (strcmp(input, "USER") == 0) {
+        switch_to_user_mode();
+        while(1){
+            1+1;
+        }
     }
     kprint("You said: ");
     kprint(input);
